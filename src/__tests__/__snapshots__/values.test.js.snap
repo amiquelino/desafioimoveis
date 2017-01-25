@@ -1,0 +1,119 @@
+exports[`findValue(key) should return value by key 1`] = `
+Object {
+  "aluguel": 1390,
+  "compra": 111200,
+}
+`;
+
+exports[`getValues() should return values 1`] = `
+Object {
+  "AC": Object {
+    "aluguel": 770,
+    "compra": 61600,
+  },
+  "AL": Object {
+    "aluguel": 670,
+    "compra": 53600,
+  },
+  "AM": Object {
+    "aluguel": 880,
+    "compra": 70400,
+  },
+  "AP": Object {
+    "aluguel": 600,
+    "compra": 48000,
+  },
+  "BA": Object {
+    "aluguel": 880,
+    "compra": 70400,
+  },
+  "CE": Object {
+    "aluguel": 770,
+    "compra": 61600,
+  },
+  "DF": Object {
+    "aluguel": 1360,
+    "compra": 108800,
+  },
+  "ES": Object {
+    "aluguel": 990,
+    "compra": 79200,
+  },
+  "GO": Object {
+    "aluguel": 780,
+    "compra": 62400,
+  },
+  "MA": Object {
+    "aluguel": 790,
+    "compra": 63200,
+  },
+  "MG": Object {
+    "aluguel": 1000,
+    "compra": 80000,
+  },
+  "MS": Object {
+    "aluguel": 700,
+    "compra": 56000,
+  },
+  "MT": Object {
+    "aluguel": 880,
+    "compra": 70400,
+  },
+  "PA": Object {
+    "aluguel": 1000,
+    "compra": 80000,
+  },
+  "PB": Object {
+    "aluguel": 1000,
+    "compra": 80000,
+  },
+  "PE": Object {
+    "aluguel": 1000,
+    "compra": 80000,
+  },
+  "PI": Object {
+    "aluguel": 710,
+    "compra": 56800,
+  },
+  "PR": Object {
+    "aluguel": 980,
+    "compra": 78400,
+  },
+  "RJ": Object {
+    "aluguel": 1390,
+    "compra": 111200,
+  },
+  "RN": Object {
+    "aluguel": 810,
+    "compra": 64800,
+  },
+  "RO": Object {
+    "aluguel": 990,
+    "compra": 79200,
+  },
+  "RR": Object {
+    "aluguel": 870,
+    "compra": 69600,
+  },
+  "RS": Object {
+    "aluguel": 1030,
+    "compra": 82400,
+  },
+  "SC": Object {
+    "aluguel": 1030,
+    "compra": 82400,
+  },
+  "SE": Object {
+    "aluguel": 730,
+    "compra": 58400,
+  },
+  "SP": Object {
+    "aluguel": 1440,
+    "compra": 115200,
+  },
+  "TO": Object {
+    "aluguel": 880,
+    "compra": 70400,
+  },
+}
+`;
