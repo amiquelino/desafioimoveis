@@ -3,9 +3,13 @@ import {Bar} from 'react-chartjs-2'
 import Interest from 'interestjs'
 
 const ChartTotalCost = (props) => {
-  let dwellingMonths = props.dwellingTime * 12
-  let interest  = new Interest(props.rentValue, dwellingMonths, props.annualInterest)
-  let rentTotal = interest.sum
+
+  let rentInterest  = new Interest(props.rentValue, props.dwellingTime, props.annualInterest)
+  let buyInterest  = new Interest(props.purchaseValue, props.dwellingTime, props.annualInterest)
+
+  console.log(rentInterest);
+  console.log(buyInterest);
+
   let data = {
     datasets: [
       {
@@ -15,7 +19,7 @@ const ChartTotalCost = (props) => {
         borderWidth: 1,
         hoverBackgroundColor: 'rgba(255,99,132,0.4)',
         hoverBorderColor: 'rgba(255,99,132,1)',
-        data: [rentTotal]
+        data: [rentInterest.sum]
       },
       {
         label: 'Comprar',
@@ -24,7 +28,7 @@ const ChartTotalCost = (props) => {
         borderWidth: 1,
         hoverBackgroundColor: 'rgba(0, 0, 255, 0.4)',
         hoverBorderColor: 'rgba(0, 0, 255, 1)',
-        data: [props.purchaseValue]
+        data: [buyInterest.sum]
       }
     ]
   }
