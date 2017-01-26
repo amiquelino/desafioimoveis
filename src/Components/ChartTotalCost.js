@@ -7,9 +7,6 @@ const ChartTotalCost = (props) => {
   let rentInterest  = new Interest(props.rentValue, props.dwellingTime, props.annualInterest)
   let buyInterest  = new Interest(props.purchaseValue, props.dwellingTime, props.annualInterest)
 
-  console.log(rentInterest);
-  console.log(buyInterest);
-
   let data = {
     datasets: [
       {
