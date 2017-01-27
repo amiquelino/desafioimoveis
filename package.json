@@ -39,8 +39,8 @@
     "chart.js": "^2.4.0",
     "interestjs": "^0.1.0",
     "react": "^15.4.2",
-    "react-chartjs-2": "^2.0.0",
     "react-dom": "^15.4.2",
-    "react-input-range": "^0.9.3"
+    "react-input-range": "^0.9.3",
+    "react-google-charts": "^3.10.10"
   }
 }
