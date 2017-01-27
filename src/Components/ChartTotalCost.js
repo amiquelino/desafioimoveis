@@ -1,5 +1,5 @@
 import React from 'react'
-import Interest from 'interestjs'
+import Interest from '../entities/Interest'
 import {Chart} from 'react-google-charts'
 
 const ChartTotalCost = (props) => {
@@ -9,8 +9,8 @@ const ChartTotalCost = (props) => {
 
   const data = [
     ['Element', 'Valor', { role: 'style' }],
-    ['Alugar', rentInterest.sum, '#4C3FFF'],
-    ['Comprar', buyInterest.sum, 'E612E8']
+    ['Alugar', rentInterest.compound(), '#4C3FFF'],
+    ['Comprar', buyInterest.compound(), 'E612E8']
   ]
 
   const options={

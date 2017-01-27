@@ -4,7 +4,7 @@ exports[`ChartTotalCost render using Snapshots 1`] = `
     Custo total
   </h2>
   <div
-    id="ScatterChart"
+    id="chartTotalCost"
     style={
       Object {
         "height": "400px",
