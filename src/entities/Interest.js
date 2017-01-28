@@ -1,13 +1,13 @@
 class Interest {
   constructor( value , period, rate ) {
-    if ( !value )
-      throw new Error( "value should not be null!" )
+    if ( !value  || value <= 0)
+      throw new Error( "value should be major than zero." )
 
-    if ( !period )
-      throw new Error( "period should not be null!" )
+    if ( !period || period <= 0 )
+      throw new Error( "period should be major than zero" )
 
-    if ( !rate )
-        throw new Error( "rate should not be null!" )
+    if ( !rate || rate < 0.5|| rate > 100 )
+        throw new Error( "rate should be between 0.5 & 100" )
 
     this.value = value
     this.period = period
