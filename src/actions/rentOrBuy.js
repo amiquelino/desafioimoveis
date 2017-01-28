@@ -9,7 +9,7 @@ export const setRentValue = ( rentValue ) => ({
 })
 
 export const setPurchaseValue = ( purchaseValue ) => ({
-  type: 'SET_RPURCHASE_VALUE',
+  type: 'SET_PURCHASE_VALUE',
   purchaseValue
 })
 
