@@ -1,9 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { setRegion, setRentValue, setPurchaseValue, setDwellingTime, setAnnualInterest } from '../actions/rentOrBuy'
-import SelectRegion from '../Components/SelectRegion'
+import SelectRegion from '../components/SelectRegion'
 import InputRange from 'react-input-range'
-import ChartTotalCost from '../Components/ChartTotalCost'
+import ChartTotalCost from '../components/ChartTotalCost'
 
 export const FormRentOrBuy = ({
   region,

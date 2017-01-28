@@ -11,7 +11,7 @@ const App = () => (
       <h2>Comprar ou Alugar?</h2>
     </div>
     <br/>
-    //<FormRentOrBuy/>
+    <FormRentOrBuy/>
   </div>
 )
 
