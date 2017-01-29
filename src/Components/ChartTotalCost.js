@@ -1,16 +1,11 @@
 import React from 'react'
-import Interest from '../entities/Interest'
 import {Chart} from 'react-google-charts'
 
 const ChartTotalCost = (props) => {
-
-  const rentInterest  = new Interest(props.rentValue, props.dwellingTime, props.annualInterest)
-  const buyInterest  = new Interest(props.purchaseValue, props.dwellingTime, props.annualInterest)
-
   const data = [
     ['Element', 'Valor', { role: 'style' }],
-    ['Alugar', rentInterest.compound(), '#4C3FFF'],
-    ['Comprar', buyInterest.compound(), 'E612E8']
+    ['Alugar', props.rentInterest, '#4C3FFF'],
+    ['Comprar', props.buyInterest, 'E612E8']
   ]
 
   const options={
@@ -36,10 +31,8 @@ const ChartTotalCost = (props) => {
 }
 
 ChartTotalCost.propTypes = {
-  rentValue: React.PropTypes.number.isRequired,
-  purchaseValue: React.PropTypes.number.isRequired,
-  dwellingTime: React.PropTypes.number.isRequired,
-  annualInterest: React.PropTypes.number.isRequired
+  rentInterest: React.PropTypes.number.isRequired,
+  buyInterest: React.PropTypes.number.isRequired,
 }
 
 export default ChartTotalCost

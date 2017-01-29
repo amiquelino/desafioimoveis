@@ -11,6 +11,8 @@ export const FormRentOrBuy = ({
   purchaseValue,
   dwellingTime,
   annualInterest,
+  rentInterest,
+  buyInterest,
   onRegionSelected,
   updateRentValue,
   updatePurchaseValue,
@@ -70,11 +72,8 @@ export const FormRentOrBuy = ({
         onChange={updateAnnualInterest}
       />
     </div>
-    <ChartTotalCost
-      rentValue={rentValue}
-      purchaseValue={purchaseValue}
-      dwellingTime={dwellingTime}
-      annualInterest={annualInterest}/>
+    <ChartTotalCost rentInterest={rentInterest} buyInterest={buyInterest} />
+    >
   </form>
 
 )
@@ -84,11 +83,13 @@ export default connect(
     rentValue: state.rentOrBuy.rentValue,
     purchaseValue: state.rentOrBuy.purchaseValue,
     dwellingTime: state.rentOrBuy.dwellingTime,
-    annualInterest: state.rentOrBuy.annualInterest
+    annualInterest: state.rentOrBuy.annualInterest,
+    rentInterest: state.rentOrBuy.compoundInterest.rent,
+    buyInterest: state.rentOrBuy.compoundInterest.buy
   }),
   ( dispatch ) => ({
     onRegionSelected: ( e ) => dispatch(setRegion( e.target.value )),
-    updateRentValue: ( value ) => dispatch(setRentValue( value )),
+    updateRentValue: ( component, value ) => dispatch(setRentValue( value )),
     updatePurchaseValue: ( component, value ) => dispatch(setPurchaseValue( value )),
     updateDwellingTime: ( component, value ) => dispatch(setDwellingTime( value )),
     updateAnnualInterest: ( component, value ) => dispatch(setAnnualInterest( value ))
