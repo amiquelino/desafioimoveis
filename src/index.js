@@ -6,6 +6,7 @@ import createLogger from 'redux-logger'
 import thunk from 'redux-thunk'
 import reducer from './reducers'
 import App from './containers/App'
+import { getAllRegions } from './actions'
 
 const middleware = [ thunk ];
 if (process.env.NODE_ENV !== 'production') {
@@ -16,6 +17,7 @@ const store = createStore(
   reducer,
   applyMiddleware(...middleware)
 )
+store.dispatch(getAllRegions())
 
 render(
   <Provider store={store}>

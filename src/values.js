@@ -1,13 +1,8 @@
-
-export const getValues = () => {
-  const values = require('../api/valores.json')
-  return values
-}
-
-export const findValue = ( key ) => {
-  if(!key)
-    throw new Error( "key should not be null!" )
-    
-  let values = getValues()
-  return values[key]
+export const getValues = () =>  {
+  return fetch('http://localhost:3001/api/values')
+  .then((response) => response.json())
+  .then(responseJson => responseJson)
+  .catch(( error ) => {
+      console.error( error )
+  })
 }

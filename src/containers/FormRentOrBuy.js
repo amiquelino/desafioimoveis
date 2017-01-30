@@ -6,6 +6,7 @@ import InputRange from 'react-input-range'
 import ChartTotalCost from '../components/ChartTotalCost'
 
 export const FormRentOrBuy = ({
+  regions,
   region,
   rentValue,
   purchaseValue,
@@ -24,6 +25,7 @@ export const FormRentOrBuy = ({
       <label>
         Selecione seu estado:
         <SelectRegion
+          dataset={regions}
           name="SelectRegion"
           selectedOption={region}
           controlFunc={onRegionSelected}/>
@@ -79,6 +81,7 @@ export const FormRentOrBuy = ({
 )
 export default connect(
   ( state ) => ({
+    regions: state.regions.dataset,
     region: state.rentOrBuy.region,
     rentValue: state.rentOrBuy.rentValue,
     purchaseValue: state.rentOrBuy.purchaseValue,

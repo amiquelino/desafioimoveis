@@ -1,4 +1,3 @@
-import { findValue } from '../values'
 import Interest from '../entities/Interest'
 
 const setInterest = (rentValue, purchaseValue, dwellingTime, annualInterest) => {
@@ -11,27 +10,24 @@ const setInterest = (rentValue, purchaseValue, dwellingTime, annualInterest) => 
   }
 }
 
-let value = findValue("RJ")
-
 const initialState = {
   region: "RJ",
-  rentValue: value.aluguel,
-  purchaseValue: value.compra,
+  rentValue: 1390,
+  purchaseValue: 111200,
   dwellingTime: 10,
   annualInterest: 11.5,
-  compoundInterest: setInterest(value.aluguel, value.compra, 10, 11.5)
+  compoundInterest: setInterest(1390, 111200, 10, 11.5)
 }
 
 const rentOrBuy = (state = initialState, action) => {
   switch (action.type) {
     case 'SET_REGION':
-      value = findValue( action.region)
       return {
         ...state,
         region: action.region,
-        rentValue: value.aluguel,
-        purchaseValue: value.compra,
-        compoundInterest: setInterest(value.aluguel, value.compra, state.dwellingTime, state.annualInterest)
+        rentValue: action.aluguel,
+        purchaseValue: action.compra,
+        compoundInterest: setInterest(action.aluguel, action.compra, state.dwellingTime, state.annualInterest)
       }
     case 'SET_RENT_VALUE':
       return {

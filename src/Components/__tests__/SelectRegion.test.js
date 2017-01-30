@@ -3,11 +3,11 @@ import renderer from 'react-test-renderer'
 import SelectRegion from '../SelectRegion'
 
 describe('SelectRegion', ( ) => {
-  let id = 'selectTest'
-
+  const id = 'selectTest'
+  const regions = require('../../../api/valores.json')
   it('render using Snapshots', ( ) => {
     let component = renderer.create(
-        <SelectRegion   name={id} selectedOption={'RJ'} controlFunc={jest.fn()}/>)
+        <SelectRegion dataset={regions}  name={id} selectedOption={'RJ'} controlFunc={jest.fn()}/>)
     expect( component ).toMatchSnapshot( )
   })
 })

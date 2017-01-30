@@ -1,10 +1,9 @@
 import React from 'react'
-import { getValues } from "../values"
 
-const SelectRegion = (props) => {
-  const values = getValues()
-  let regions = Object.keys(values)
+const SelectRegion =  (props) => {
 
+  const regions = Object.keys(props.dataset)
+  
   return (
       <select
         name={name}
@@ -24,7 +23,8 @@ const SelectRegion = (props) => {
 SelectRegion.propTypes = {
   name: React.PropTypes.string.isRequired,
   selectedOption: React.PropTypes.string,
-  controlFunc: React.PropTypes.func.isRequired
+  controlFunc: React.PropTypes.func.isRequired,
+  dataset: React.PropTypes.object.isRequired,
 }
 
 export default SelectRegion
