@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/olxbrasil/desafioimoveis.git"
+    "url": "git+https://github.com/amiquelinol/desafioimoveis.git"
   },
   "keywords": [
     "olx",
@@ -26,9 +26,9 @@
   "author": "Demetrius Nunes",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/olxbrasil/desafioimoveis/issues"
+    "url": "https://github.com/amiquelino/desafioimoveis/issues"
   },
-  "homepage": "https://github.com/olxbrasil/desafioimoveis#readme",
+  "homepage": "https://github.com/amiquelino/desafioimoveis#readme",
   "devDependencies": {
     "babel-jest": "^18.0.0",
     "babel-preset-es2015": "^6.22.0",
